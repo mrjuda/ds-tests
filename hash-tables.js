@@ -1,9 +1,9 @@
 // HASH TABLE
 
-const hash = (key, size)} => {
+const hash = (key, size) => {
   let hashedKey = 0;
   for(let i = 0; i < key.length; i++) {
-    hashedKey = key.charCeAt(i);
+    hashedKey = key.charCodeAt(i);
   }
 
   return hashedKey % size;
@@ -31,19 +31,26 @@ class HashTable {
     return deleted
   }
 
-  search() {
+  search(key) {
     let idx = hash(key, this.size)
     return this.buckets[idx].get(key)
   }
 }
 
-const HashTable = new HashTable();
+const hashTable = new HashTable();
 
-HashTable.insert('serena', 'moon');
-HashTable.insert('amy', 'mercury');
-HashTable.insert('rei', 'mars');
-HashTable.insert('lita', 'jupiter');
-HashTable.insert('mina', 'venus');
-HashTable.insert('darien', 'tuxedo mask');
+hashTable.insert('serena', 'moon');
+hashTable.insert('amy', 'mercury');
+hashTable.insert('rei', 'mars');
+hashTable.insert('lita', 'jupiter');
+hashTable.insert('mina', 'venus');
+hashTable.insert('darien', 'tuxedo mask');
 
+hashTable.search('rei');
+hashTable.search('lita');
 
+hashTable.remove('darian');
+hashTable.remove('mina');
+
+console.log(hashTable);
+console.log(hashTable.search('rei'));
