@@ -3,15 +3,12 @@ This is a project for Data Structures tests only.
 Included but not limited to: stacks, queues, linked lists, hash tables, binary search tests.
 
 ## Built with
-- HTML
-- CSS
 - JavaScript
 
 ## Live Demo
 - Live version: N/A
 
-- Mobile version:
-> NOT YET
+- Mobile version: N/A
 
 ## Authors
 **Judá F Teixeira**
