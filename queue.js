@@ -1,5 +1,9 @@
 // QUEUE
 
+/*
+https://www.youtube.com/watch?v=1AJ4ldcH2t4
+*/
+
 class Queue {
   constructor() {
     this.storage = {};

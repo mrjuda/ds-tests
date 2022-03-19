@@ -1,5 +1,8 @@
-/* index.js */
 // (DOUBLY) LINKED LISTS
+
+/*
+https://www.youtube.com/watch?v=ChWWEncl76Y
+*/
 class LinkedList {
   constructor() {
     this.head = this.tail = null

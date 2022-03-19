@@ -1,5 +1,9 @@
 // HASH TABLE
 
+/*
+https://www.youtube.com/watch?v=6JeuJRqKJrI
+*/
+
 const hash = (key, size) => {
   let hashedKey = 0;
   for(let i = 0; i < key.length; i++) {
