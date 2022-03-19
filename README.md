@@ -1,5 +1,6 @@
-# Linked List Labs
-This is a project for linked list tests only.
+# Data Structures Labs
+This is a project for Data Structures tests only.
+Included but not limited to: stacks, queues, linked lists, hash tables, binary search tests.
 
 ## Built with
 - HTML
