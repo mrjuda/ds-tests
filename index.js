@@ -1,13 +1,12 @@
 /* index.js */
-
 // (DOUBLY) LINKED LISTS
 class LinkedList {
-  contructor() {
+  constructor() {
     this.head = this.tail = null
   }
   
   // add to the end of the list / tail
-  append() {
+  append(value) {
     // if this list is empty
     if (!this.tail) {
       this.head = this.tail = new Node(value)
@@ -15,9 +14,11 @@ class LinkedList {
       let oldTail = this.tail
       this.tail = new Node(value)
       oldTail.next = this.tail
-      this.tail.previous = oldTail
+      this.tail.prev = oldTail
     }
   }
+  
+  
   
   // add to beginning of the list / head
   prepend(value) {
@@ -31,6 +32,9 @@ class LinkedList {
       this.head.next = oldHead
     }
   }
+
+
+
   deleteHead() {
     // if this list is empty
     if(!this.head) {
@@ -44,9 +48,13 @@ class LinkedList {
         this.head = this.head.next
         this.head.prev = null
       }
-      return removedHead
+      return removedHead.value
     }
   }
+
+
+
+
 
   deleteTail() {
     // if this list is empty
@@ -62,6 +70,7 @@ class LinkedList {
         this.tail.next = null
       }
       return removedTail.value
+    }
   }
 
   search(value) {
@@ -86,4 +95,27 @@ class Node {
   }
 }
 
+let list = new LinkedList()
 
+list.append(1)
+list.append(2)
+list.append(3)
+
+list.prepend(0)
+list.prepend(-1)
+
+list.search(1)
+
+console.log(list);
+
+list.prepend(0)
+list.prepend(-1)
+
+list.search(0)
+list.search(3)
+list.search(999)
+
+list.deleteHead()
+list.deleteTail()
+
+console.log(list);
